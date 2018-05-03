@@ -1,36 +1,64 @@
+/* Universal Styles */
+
 html {
+  font-family: 'Arial', 'Helvetica', sans-serif;
   font-size: 16px;
 }
 
-header {
+/* Universal box-sizing */
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 5rem;
+  color: red;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: blue;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.content {
+  position: relative;
+  top: 4rem;
+}
+
+.container {
   display: flex;
   align-items: center;
+  padding: 2rem 1.5rem;
+}
+
+/* Header Nav Section */
+
+header.container {
+  /* display: flex; */
+  background: #fff;
+  /* align-items: center; */
   position: fixed;
   z-index: 100;
   height: 4rem;
   width: 100%;
   padding: 0 1.5rem;
-  background-color: lightblue;
-}
-
-header .content {
-  display: flex;
-  align-items: center;
-  padding: 0 1.5rem;
-  background-color: pink;
 }
 
 header .logo {
   display: flex;
   align-items: center;
   flex: 1;
-  background-color: red;
   font-size: 2rem;
 }
 
 header nav ul {
   display: flex;
-  background-color: green;
 }
 
 header nav ul li {
@@ -40,3 +68,44 @@ header nav ul li {
 header nav ul li:last-child {
   padding-right: 0;
 }
+
+.brand .alt-color {
+  color: grey;
+}
+
+/* Start Here Section */
+
+#start-here.container {
+  background-color: lightblue;
+}
+
+#start-here .image {
+  width: 60%;
+}
+
+.start-content {
+  padding-left: 1.5rem;
+}
+
+#start-here .button {
+  color: #fff;
+  padding: 0.5rem 0;
+  background-color: grey;
+}
+
+/* Info Section */
+#info-section.container {
+  background-color: lightgreen;
+}
+
+/* Start Learning Section */
+#start-learning.container {
+  background-color: orange;
+}
+
+/* Thesis Exhibit Section */
+#thesis-exhibit.container {
+  background-color: pink;
+}
+
+/* Footer Section */
