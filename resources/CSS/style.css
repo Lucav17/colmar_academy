@@ -14,18 +14,20 @@ html {
 h1 {
   font-weight: 700;
   font-size: 4.5rem;
-  color: red;
+  color: #599FB2;
   line-height: 5rem;
 }
 
 h2 {
   font-size: 3rem;
   font-weight: bold;
+  color: #599FB2;
 }
 
 h3 {
   font-size: 2.5rem;
   line-height: 3rem;
+  color: dimgrey;
 }
 
 h4 {
@@ -51,9 +53,7 @@ p {
 /* Header Nav Section */
 
 header.container {
-  /* display: flex; */
   background: #fff;
-  /* align-items: center; */
   position: fixed;
   z-index: 100;
   height: 4rem;
@@ -76,32 +76,71 @@ header nav ul {
   display: flex;
 }
 
-header nav ul li a {
-  font-size: 1.5rem;
-  color: grey;
+header nav ul li {
+  font-size: 1.25rem;
   padding-right: 1rem;
+}
+
+header nav ul li a {
+  color: #599FB2;
+  transition: color 500ms ease-in 100ms;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+  color: #B27B47;
 }
 
 header nav ul li:last-child {
   padding-right: 0;
 }
 
+.mobile {
+  display: none;
+}
+
 .brand .alt-color {
-  color: grey;
+  color: #B27B47;
   font-weight: 400;
 }
 
 .brand {
   font-weight: 700;
+  color: #599FB2;
 }
+
+/* For screens less than 760px */
+@media only screen and (max-width: 47.5rem) {
+
+  div.logo {
+    display: none;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%
+  }
+
+}
+
 /* Start Here Section */
 
 #start-here.container {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   flex-wrap: wrap;
-  background-color: lightblue;
+  background-color: #98E9FF;
 }
 
 #start-here .image {
@@ -132,8 +171,46 @@ header nav ul li:last-child {
 #start-here .button {
   color: #fff;
   padding: 1.5rem 0;
-  background-color: grey;
+  background-color: #B27B47;
   text-align: center;
+  transition: background-color 300ms ease-in 100ms;
+}
+
+#start-here .button:hover {
+  background-color: #FFCA98;
+}
+
+/* For screens less than 760px */
+@media only screen and (max-width:47.5rem){
+
+  #start-here.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  #start-here .image {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  #start-here img {
+    width: 100%;
+    height: auto;
+  }
+
+  .start-content {
+    /* display: flex;
+    flex-direction: column; */
+    padding: 2rem 1rem;
+    width: 100%;
+  }
+
+  .start-content h3{
+    padding-bottom: 1.5rem;
+  }
+
 }
 
 /* Info Section */
@@ -141,32 +218,35 @@ header nav ul li:last-child {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
-  background-color: lightgreen;
+  background-color: #FFFFFF;
 }
 
-#info-section .image {
+#info-section .image,
+#thesis-exhibit .image {
   width: 60%;
   padding-right: 1.5rem;
 }
 
-#info-section img {
+#info-section img,
+#start-learning img,
+#thesis-exhibit img {
   width: 100%;
   height: auto;
 }
 
-.info-content {
+.info-content,
+.thesis-content {
   display: flex;
   flex-direction: column;
   width: 40%;
 }
 
 .image-quote {
-  padding: 2rem 0;
+  padding-top: 2rem;
 }
 
 .image-quote p {
-  padding: 1.5rem 0;
+  padding-top: 1.5rem;
 }
 
 p.quote {
@@ -189,12 +269,16 @@ p.quote {
 }
 
 .info-content div.article:last-child {
-  background-color: gray;
+  background-color: #B2EEFF;
 }
 
 .article-image {
   width: 35%;
   height: auto;
+}
+
+.article-image-mobile {
+  display: none;
 }
 
 .article img {
@@ -203,30 +287,200 @@ p.quote {
 }
 
 .article a {
-  color: blue;
+  color: #599FB2;
+}
+
+.article a:hover {
+  text-decoration: underline;
+}
+
+/* For screens less than 760px */
+@media only screen and (max-width: 47.5rem) {
+
+  #info-section.container {
+    padding: 2rem 1rem;
+  }
+
+  #info-section .image {
+    display: none;
+  }
+
+  .info-content {
+    width: 100%;
+  }
+
+  .article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0rem 0rem 2rem 0rem;
+  }
+
+  .article-image {
+    display: none;
+  }
+  .article-image-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .article img {
+    width: 100%;
+    height: auto;
+  }
+
+  .article-details {
+    width: 100%;
+    padding-top: 2rem;
+  }
+
+  .info-content div.article:last-child {
+    background-color: #FFF;
+    padding-bottom: 0;
+  }
+
 }
 
 /* Start Learning Section */
 #start-learning.container {
   display: flex;
   flex-direction: column;
-  background-color: orange;
+  background-color: #B27B47;
   padding-left: 4.5rem;
   padding-right: 4.5rem;
 }
 
+#start-learning h2,
+#thesis-exhibit h2 {
+  padding-bottom: 2rem;
+}
+
+#start-learning h2 {
+  color: #FFFFFF;
+}
+
+#start-learning h3 {
+  padding-bottom: 1rem;
+}
+
 .courses {
   display: flex;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.courses div:last-child {
+  margin-right: 0;
 }
 
 .course {
   background-color: #fff;
+  margin-right: 2rem;
+  width: 33%;
 }
 
+.course-details {
+  padding: 1rem;
+}
 
-/* Thesis Exhibit Section */
+.course-title {
+  padding-bottom: 0.5rem;
+}
+
+/* Thesis Exhibit Section - Shares some rules with Info Section */
 #thesis-exhibit.container {
-  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+}
+
+.thesis-exhibit-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#thesis-exhibit video {
+  width: 100%;
+  height: auto;
+}
+
+#thesis-exhibit .thesis-content div.article:first-child {
+  background-color: #B2EEFF;
+}
+
+#thesis-exhibit .image-quote {
+    padding-top: 1.5rem;
+  }
+
+#thesis-exhibit .image-quote p {
+    padding-top: 0.5rem;
+  }
+
+#thesis-exhibit h2.quote-title {
+  padding: 0;
+}
+
+/* For screens less than 760px */
+@media only screen and (max-width: 47.5rem) {
+
+  #thesis-exhibit.container {
+    padding: 2rem 0 1.5rem 0;
+  }
+
+  .thesis-content {
+    display: none;
+  }
+
+  .image-quote {
+    display: none;
+  }
+
+  #thesis-exhibit .image {
+    width: 100%;
+    padding-right: 0;
+  }
+
 }
 
 /* Footer Section */
+
+footer.container {
+  padding-top: 1rem;
+  color: #696969;
+  background-color: #B2EEFF;
+}
+
+.copyright {
+  flex-grow: 1;
+}
+
+.footer-nav ul {
+  display: flex;
+}
+
+.footer-nav ul li {
+  padding-right: 1rem;
+}
+
+.footer-nav ul li a {
+  color: #696969;
+}
+
+.footer-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-nav ul li:last-child {
+  padding-right: 0;
+}
+
+@media only screen and (max-width: 47.5rem) {
+  .footer-nav {
+    display: none;
+  }
+
+  footer.container {
+    padding-bottom: 1rem;
+  }
+}
