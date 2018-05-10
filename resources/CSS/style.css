@@ -6,7 +6,6 @@ html {
 }
 
 /* Universal box-sizing */
-
 * {
   box-sizing: border-box;
 }
@@ -48,6 +47,19 @@ p {
   align-items: center;
   padding: 2rem 1.5rem;
   width: 100%;
+}
+
+/* 928 */
+@media only screen and (max-width: 58rem) {
+
+  h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
 }
 
 /* Header Nav Section */
@@ -298,7 +310,7 @@ p.quote {
 @media only screen and (max-width: 47.5rem) {
 
   #info-section.container {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem 2rem 1rem;
   }
 
   #info-section .image {
@@ -385,6 +397,56 @@ p.quote {
 
 .course-title {
   padding-bottom: 0.5rem;
+}
+
+/* For screens less than 760px */
+@media only screen and (max-width: 47.5rem) {
+
+  #start-learning.container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #start-learning h3 {
+    padding-bottom: 0;
+  }
+
+  #start-learning h2 {
+    padding-bottom: 1rem;
+  }
+  .courses {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .course {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+    transition: background-color 200ms ease-in 100ms;
+  }
+
+  .course:hover {
+    background-color: #B2EEFF;
+  }
+
+  .course-image,
+  .course-title,
+  .details {
+    display: none;
+  }
+
+  .course-details {
+    padding: 0rem;
+  }
+
+  .courses div:last-child {
+    margin-right: 0;
+  }
+
 }
 
 /* Thesis Exhibit Section - Shares some rules with Info Section */
