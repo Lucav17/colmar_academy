@@ -206,6 +206,10 @@ header nav ul li:last-child {
   transition: background-color 300ms ease-in 100ms;
 }
 
+#start-here .button a {
+  color: #fff;
+}
+
 #start-here .button:hover {
   background-color: #FFCA98;
 }
